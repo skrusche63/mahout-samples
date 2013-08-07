@@ -4,7 +4,7 @@ mahout-samples
 This repository provides a collection of Mahout code snippets. The main purpose of these snippets is to use 
 Mahout from Java applications (and not from commandline).
 
-## Frequent Pattern Mining
+### Frequent Pattern Mining
 Note, that Mahout is not specialised for pattern mining. There is only one algorithm, which is called "Parallel FP-Growth" 
 for finding itemsets. Algorithms for generating the association rules after the itemsets are found are not included and need
 to be implemented by yourself. 
@@ -24,5 +24,5 @@ won't find in other data mining tools like for mining
 * and more.
 
 
-## MahoutEngine
+### MahoutEngine
 This is a thin wrapper for a selected list of commonly used Mahout algorithms. 
