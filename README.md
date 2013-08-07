@@ -23,6 +23,9 @@ won't find in other data mining tools like for mining
 * itemsets from uncertain data, 
 * and more.
 
+_to be continued_
 
 ### MahoutEngine
 This is a thin wrapper for a selected list of commonly used Mahout algorithms. 
+
+_to be continued_
