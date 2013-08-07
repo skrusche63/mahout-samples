@@ -3,4 +3,16 @@
   <groupId>Mahout-Samples</groupId>
   <artifactId>mahout-samples</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+      <dependency>
+		<groupId>org.apache.mahout</groupId>
+		<artifactId>mahout-core</artifactId>
+		<version>0.8</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.mahout</groupId>
+		<artifactId>mahout-integration</artifactId>
+		<version>0.8</version>
+	</dependency>
+  </dependencies>
 </project>
