@@ -1,6 +1,7 @@
 package de.kp.mahout;
 
 import org.apache.mahout.fpm.pfpgrowth.FPGrowthDriver;
+import org.apache.mahout.text.SequenceFilesFromDirectory;
 
 @SuppressWarnings("deprecation")
 public class MahoutEngine {
@@ -52,6 +53,40 @@ public class MahoutEngine {
 		try {
 			FPGrowthDriver.main(args);
 
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
+	}
+
+	/**
+	 * A helper method to convert a directory of text files into SequenceFiles. This method takes
+	 * in a directory containing sub folders of text documents and recursively reads the files and 
+	 * creates a SequenceFile of docid => content. 
+	 * 
+	 * The docid is set as the relative path of the document from the text directory prepended with 
+	 * a specified prefix. The input encoding of the text files is set to UTF-8. The content of the 
+	 * output SequenceFiles are encoded as UTF-8 text.
+ 	 * 
+	 * @param textDir
+	 * @param sequenceDir
+	 */
+	public void sequenceFiles(String textDir, String sequenceDir) {
+
+		String[] args = {
+			"-c",
+			"UTF-8",			
+			"-i",
+			textDir,
+			"-o",
+			sequenceDir
+		};
+
+		try {			
+			SequenceFilesFromDirectory.main(args);
+
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 
