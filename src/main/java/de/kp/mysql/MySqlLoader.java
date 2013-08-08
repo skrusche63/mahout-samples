@@ -12,10 +12,10 @@ import org.apache.mahout.cf.taste.model.Preference;
 public class MySqlLoader {
 
 	/*
-	 * This method load the movielens ratings (userID, itemID, preference)
+	 * This method loads the movielens ratings (userID, itemID, preference)
 	 * prepared as a csv file into a MySQL database
 	 */
-	public void main(String[] args) {
+	public static void main(String[] args) {
 		
 		HashMap<String,String> properties = new HashMap<String,String>();
 		
@@ -61,7 +61,8 @@ public class MySqlLoader {
 			reader.close();
 			
 			connector.setPreferencesByBatch(preferences.iterator(), 1000);
-
+			connector.close();
+			
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 

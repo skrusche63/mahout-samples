@@ -28,8 +28,8 @@ public class MySQLConnector {
 	public static String DB_PORT = "port";
 	public static String DB_NAME = "database";
 	
-	public static String DB_USER = "alias";
-	public static String DB_PASS = "keypass";
+	public static String DB_USER = "user";
+	public static String DB_PASS = "pass";
 	
 	public static String MYSQL_DRIVER = "com.mysql.jdbc.Driver";
 
@@ -81,7 +81,7 @@ public class MySQLConnector {
 	     */
 	    ds.setUrl(endpoint);
 	    ds.setUsername(alias);
-	    ds.setPassword(keypass);
+	    if (keypass.equals("") == false) ds.setPassword(keypass);
 
 	    /*
 	     * fixed parameters
