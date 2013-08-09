@@ -99,7 +99,7 @@ The listing below shows how to use the ItemRecommender.
 ```
 		// preparation phase, must only be invoked once
 
-	    	File file = new File(modelFile);
+		File file = new File(modelFile);
 
 		HashMap<String, String> props = new HashMap<String, String>();
 		
