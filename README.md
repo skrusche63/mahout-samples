@@ -49,6 +49,21 @@ This relational database is used as storage for the Movielens reference data (us
 defined to e.g. hold the movie data. The MySQL database may be invoked by a (separate) web service to add or manipulate the respective 
 reference data.
 
+The listing below indicates how to load the MovieLens preference data into the MySQL database.
+```
+  	String[] args = {
+				"127.0.0.1",
+				"3306",
+				"movielens",
+				"user",
+				"secret",
+				"/your path/mahout-samples/src/main/resources/ratings.dat"
+		};
+		
+		MySqlLoader.main(args);
+
+```
+
 #### ModelBuilder
 This component operates on the reference data provided by the MySQL database and computes a file-based training dataset. The ModelBuilder 
 uses Mahout's LogLikelihoodSimilarity.  
