@@ -4,13 +4,13 @@ import org.apache.mahout.fpm.pfpgrowth.FPGrowthDriver;
 import org.apache.mahout.text.SequenceFilesFromDirectory;
 
 @SuppressWarnings("deprecation")
-public class MahoutEngine {
+public class MahoutWrapper {
 
 	/**
 	 * This class is a thin wrapper for a selected set of Mahout machine learning
 	 * algorihtms. 
 	 */
-	public MahoutEngine() {		
+	public MahoutWrapper() {		
 	}
 	
 	/**
