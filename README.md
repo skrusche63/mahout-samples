@@ -25,6 +25,13 @@ won't find in other data mining tools like for mining
 
 _to be continued_
 
+### Classification
+
+_to be continued_
+
+### Topic Modelling
+
+_to be continued_
 
 ### Recommendation System
 The recommendation system provided here uses the non-Hadoop-based collaborative filtering functionality inside Mahout from a former 
