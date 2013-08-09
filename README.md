@@ -113,8 +113,8 @@ The listing below shows how to use the ItemRecommender.
 		
 		DataModel dataModel = new MySQLConnector(props).getDataModel();		
 
-        	ItemSimilarity itemSimilarity = new FileItemSimilarity(file);
-        	AllSimilarItemsCandidateItemsStrategy allSimilarItemsStrategy = new AllSimilarItemsCandidateItemsStrategy(itemSimilarity);
+		ItemSimilarity itemSimilarity = new FileItemSimilarity(file);
+		AllSimilarItemsCandidateItemsStrategy allSimilarItemsStrategy = new AllSimilarItemsCandidateItemsStrategy(itemSimilarity);
 
         	ItemRecommender recommender = new ItemRecommender(dataModel, 
         		itemSimilarity, allSimilarItemsStrategy, allSimilarItemsStrategy);
