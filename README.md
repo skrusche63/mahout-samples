@@ -70,7 +70,7 @@ uses Mahout's LogLikelihoodSimilarity.
 
 The listing below gives a hint how to create the training dataset.
 ```
-		String modelFile = "/your-path/mahout-samples/src/main/resources/ratings.model";
+		String modelFile = "/your path/mahout-samples/src/main/resources/ratings.model";
 
 		HashMap<String, String> props = new HashMap<String, String>();
 		
