@@ -40,6 +40,10 @@ The system comprises the following components
 * ModelBuilder
 * ItemRecommender
 
+The picture illustrates the dataflow between these components.
+![Recommendation System / Dataflow](https://raw.github.com/skrusche63/mahout-samples/master/src/main/resources/dataflow.png)
+
+
 #### MySQL Database 
 This relational database is used as storage for the Movielens reference data (userID, itemID, preference). Other tables may be 
 defined to e.g. hold the movie data. The MySQL database may be invoked by a (separate) web service to add or manipulate the respective 
