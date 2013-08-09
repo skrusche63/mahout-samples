@@ -25,6 +25,34 @@ won't find in other data mining tools like for mining
 
 _to be continued_
 
+
+### Recommendation System
+The recommendation system provided here uses the non-Hadoop-based collaborative filtering functionality inside Mahout from a former 
+project called "Taste". The main objective associated with this chosen functionality is, that it may also be used e.g. with low 
+latency processing.
+
+A collaborative filtering engine takes users' preferences for items ("tastes") and returns estimated preferences for other items.
+This recommendation system is based on the [MovieLens Dataset](http://www.grouplens.org/system/files/ml-10m-README.html).
+
+The system comprises the following components
+
+* MySQL Database
+* ModelBuilder
+* ItemRecommender
+
+#### MySQL Database 
+This relational database is used as storage for the Movielens reference data (userID, itemID, preference). Other tables may be 
+defined to e.g. hold the movie data. The MySQL database may be invoked by a (separate) web service to add or manipulate the respective 
+reference data.
+
+#### ModelBuilder
+This component operates on the reference data provided by the MySQL database and computes a file-based training dataset. The ModelBuilder 
+uses Mahout's LogLikelihoodSimilarity.  
+
+#### ItemRecommender
+This recommender operates on the training dataset and computes recommendations for a list of items.
+
+
 ### MahoutEngine
 This is a thin wrapper for a selected list of commonly used Mahout algorithms. 
 
