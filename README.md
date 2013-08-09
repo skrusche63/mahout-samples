@@ -132,7 +132,7 @@ The listing below shows how to use the ItemRecommender.
 
 ```
 
-### MahoutEngine
+### MahoutWrapper
 This is a thin wrapper for a selected list of commonly used Mahout algorithms. 
 
 _to be continued_
