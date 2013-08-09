@@ -68,6 +68,29 @@ The listing below indicates how to load the MovieLens preference data into the M
 This component operates on the reference data provided by the MySQL database and computes a file-based training dataset. The ModelBuilder 
 uses Mahout's LogLikelihoodSimilarity.  
 
+The listing below gives a hint how to create the training dataset.
+```
+		String modelFile = "/your-path/mahout-samples/src/main/resources/ratings.model";
+
+		HashMap<String, String> props = new HashMap<String, String>();
+		
+		props.put("host", "127.0.0.1");
+		props.put("port", "3306");
+		
+		props.put("user", "user");
+		props.put("pass", "secret");
+		
+		props.put("database", "movielens");
+		
+		DataModel dataModel = new MySQLConnector(props).getTrainingData();
+		
+		int numProcessors = 1;
+		int similarItemsPerItem = 50;
+		
+		new ModelBuilder().build(new File(modelFile), dataModel, similarItemsPerItem, numProcessors);
+
+```
+
 #### ItemRecommender
 This recommender operates on the training dataset and computes recommendations for a list of items.
 
