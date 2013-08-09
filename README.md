@@ -116,7 +116,7 @@ The listing below shows how to use the ItemRecommender.
 		ItemSimilarity itemSimilarity = new FileItemSimilarity(file);
 		AllSimilarItemsCandidateItemsStrategy allSimilarItemsStrategy = new AllSimilarItemsCandidateItemsStrategy(itemSimilarity);
 
-        	ItemRecommender recommender = new ItemRecommender(dataModel, 
+		ItemRecommender recommender = new ItemRecommender(dataModel, 
         		itemSimilarity, allSimilarItemsStrategy, allSimilarItemsStrategy);
 
 		// operation phase
