@@ -94,6 +94,43 @@ The listing below gives a hint how to create the training dataset.
 #### ItemRecommender
 This recommender operates on the training dataset and computes recommendations for a list of items.
 
+The listing below shows how to use the ItemRecommender.
+
+```
+		// preparation phase, must only be invoked once
+
+	    	File file = new File(modelFile);
+
+		HashMap<String, String> props = new HashMap<String, String>();
+		
+		props.put("host", "127.0.0.1");
+		props.put("port", "3306");
+		
+		props.put("user", "user");
+		props.put("pass", "secret");
+		
+		props.put("database", "movielens");
+		
+		DataModel dataModel = new MySQLConnector(props).getDataModel();		
+
+        	ItemSimilarity itemSimilarity = new FileItemSimilarity(file);
+        	AllSimilarItemsCandidateItemsStrategy allSimilarItemsStrategy = new AllSimilarItemsCandidateItemsStrategy(itemSimilarity);
+
+        	ItemRecommender recommender = new ItemRecommender(dataModel, 
+        		itemSimilarity, allSimilarItemsStrategy, allSimilarItemsStrategy);
+
+		// operation phase
+		
+	    	int similarItems = 5;
+	    	long[] itemIDs = {
+			1234	
+		};
+
+		List<RecommendedItem> recommendedItems = recommender.recommendByItems(itemIDs, similarItems, null);
+
+		// do what you want with these recommmendations
+
+```
 
 ### MahoutEngine
 This is a thin wrapper for a selected list of commonly used Mahout algorithms. 
