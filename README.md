@@ -128,8 +128,8 @@ The listing below shows how to use the ItemRecommender.
 
 		// operation phase
 		
-	    	int similarItems = 5;
-	    	long[] itemIDs = {
+		int similarItems = 5;
+		long[] itemIDs = {
 			1234	
 		};
 
