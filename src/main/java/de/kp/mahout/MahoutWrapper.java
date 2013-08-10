@@ -2,6 +2,7 @@ package de.kp.mahout;
 
 import org.apache.mahout.fpm.pfpgrowth.FPGrowthDriver;
 import org.apache.mahout.text.SequenceFilesFromDirectory;
+import org.apache.mahout.vectorizer.SparseVectorsFromSequenceFiles;
 
 @SuppressWarnings("deprecation")
 public class MahoutWrapper {
@@ -72,7 +73,7 @@ public class MahoutWrapper {
 	 * @param textDir
 	 * @param sequenceDir
 	 */
-	public void sequenceFiles(String textDir, String sequenceDir) {
+	public void buildSequenceFiles(String textDir, String sequenceDir) {
 
 		String[] args = {
 			"-c",
@@ -85,11 +86,33 @@ public class MahoutWrapper {
 
 		try {			
 			SequenceFilesFromDirectory.main(args);
-
-			
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 
+		}
+
+	}
+	
+	public void buildSparseVectors(String[] args) {
+		
+		/*
+		 * Sample args
+		 *
+		 * String[] args = {
+		 * "-i", "input path",
+		 * "-o", "output path",
+		 * "-ow",
+		 * "-nv",
+		 * "-a", "your analyzer class"
+		 *};
+         */
+		try {
+			SparseVectorsFromSequenceFiles.main(args);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
 		}
 
 	}
