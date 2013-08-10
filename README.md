@@ -25,6 +25,13 @@ won't find in other data mining tools like for mining
 
 _to be continued_
 
+### Classification
+
+_to be continued_
+
+### Topic Modelling
+
+_to be continued_
 
 ### Recommendation System
 The recommendation system provided here uses the non-Hadoop-based collaborative filtering functionality inside Mahout from a former 
@@ -121,8 +128,8 @@ The listing below shows how to use the ItemRecommender.
 
 		// operation phase
 		
-	    	int similarItems = 5;
-	    	long[] itemIDs = {
+		int similarItems = 5;
+		long[] itemIDs = {
 			1234	
 		};
 
