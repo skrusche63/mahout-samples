@@ -29,7 +29,18 @@ _to be continued_
 
 _to be continued_
 
-### Topic Modelling
+### Topic Modeling
+Topic modeling is a machine learning discipline that provides a simple use case for labeling and classifying a collection 
+of texts and documents. Latent Dirichlet Allocation (LDA), the most commonly used topic model, is implemented by various 
+other applications, such as MALLET, LDA-c, and GENSIM. 
+
+As stated in the paper "Latent Dirichlet Allocation" by David M. Blei, Andrew Y. Ng, and Michael I. Jordan, "LDA is a 
+generative probabilistic model for collections of discrete data such as text corpora."
+
+Corpora essentially represent a large and structured set of texts. LDA performs topic distribution learning in the form 
+of Bayesian inference, an approximate inference technique based on vibrational methods and an expectation-maximization 
+(EM) algorithm for empirical Bayes parameter estimation. 
+
 
 _to be continued_
 
